@@ -25,20 +25,20 @@ interface IVehicle  {
     power: number;
 };
 
-interface Car extends IVehicle {
+interface ICar extends IVehicle {
     bodyType: string;
     wheelCount: number;
 };
 
-interface Boat extends IVehicle {
+interface IBoat extends IVehicle {
     draft: number;
 };
 
-interface Plane extends IVehicle {
+interface IPlane extends IVehicle {
     wingspan: number;
 };
 
-const car1: Car = { 
+const car1: ICar = { 
     model: "Ford focus", 
     color: "Green", 
     year: 2016, 
@@ -47,7 +47,7 @@ const car1: Car = {
     wheelCount: 4 
 } 
 
-const plane1: Plane = { 
+const plane1: IPlane = { 
     model: "Boeing 777", 
     color: "White", 
     year: 2020, 
@@ -55,7 +55,7 @@ const plane1: Plane = {
     wingspan: 65 
 } 
 
-const boat1: Boat = { 
+const boat1: IBoat = { 
     model: "Bella", 
     color: "Black", 
     year: 2022, 
@@ -76,8 +76,8 @@ class VehicleService<T> {
     };
   }
    
-let carList = new VehicleService<Car>();
-let boatList = new VehicleService<Boat>();
+let carList = new VehicleService<ICar>();
+let boatList = new VehicleService<IBoat>();
 
 carList.add(car1);
 boatList.add(boat1);
