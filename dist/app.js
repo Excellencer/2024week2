@@ -46,8 +46,8 @@ class VehicleService {
     }
     ;
 }
-const carList = new VehicleService();
-const boatList = new VehicleService();
+let carList = new VehicleService();
+let boatList = new VehicleService();
 carList.add(car1);
 boatList.add(boat1);
 console.log(carList.list(), boatList.list());
